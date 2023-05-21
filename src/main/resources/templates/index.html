@@ -256,10 +256,10 @@
                                             class="fa fa-pencil-square-o"></i></button>
                                 </a>
                                 <p>
-                                    <button type="button" aria-current="page" data-toggle="modal" data-target="#delete"
+                                    <button type="button" aria-current="page" data-toggle="modal" th:data-target="'#delete-' + ${cargo.id}"
                                             class="btn btn-danger btn-rounded"><i class="fa fa-trash-o"></i></button>
 
-                                <div class="modal fade" id="delete" tabindex="-1" role="dialog"
+                                <div class="modal fade" th:id="'delete-' + ${cargo.id}" tabindex="-1" role="dialog"
                                      aria-labelledby="delLabel"
                                      aria-hidden="true">
                                     <div class="modal-dialog modal-md">

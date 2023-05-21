@@ -38,8 +38,8 @@ public class AppController {
     @RequestMapping("/")
     public String viewHomePage(Model model, @Param("keyword") String keyword) {
         List<Cargo> listCargo = service.listAll(keyword);
-        Cargo cargo = new Cargo();
-        model.addAttribute("newCargo", cargo);
+        Cargo newCargo = new Cargo();
+        model.addAttribute("newCargo", newCargo);
         model.addAttribute("listCargo", listCargo);
         model.addAttribute("keyword", keyword);
         model.addAttribute("isAdmin", SecurityContextHolder
